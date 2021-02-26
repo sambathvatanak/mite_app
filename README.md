@@ -1,5 +1,8 @@
 # miteapp
 
+![Screenshot_1614348063](https://user-images.githubusercontent.com/54050680/109310374-0083a180-7877-11eb-84eb-1830d0cb49a9.png)
+
+
 A new Flutter application.
 
 ## Getting Started
