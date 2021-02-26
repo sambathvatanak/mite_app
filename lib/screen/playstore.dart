@@ -202,7 +202,6 @@ Widget _columnThree() {
 Widget _columnFour() {
   return Container(
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(height: 15.0),
         Container(
