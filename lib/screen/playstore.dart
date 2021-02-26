@@ -5,84 +5,174 @@ class playStore extends StatefulWidget {
   _playStoreState createState() => _playStoreState();
 }
 
-Widget _rowOne(){
+Widget _rowOne() {
   return Stack(
     alignment: Alignment.center,
     children: <Widget>[
       Container(
-          height: 240,
-          decoration: new BoxDecoration(
-              color: Colors.white,
-            image: DecorationImage(
-              image: AssetImage('assets/Preview.jpg'),
-              fit: BoxFit.fill,
-            ),
+        height: 240,
+        decoration: new BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(
+            image: AssetImage('assets/Preview.jpg'),
+            fit: BoxFit.fill,
           ),
+        ),
       ),
       IconButton(
-            iconSize: 90.0,
-            icon: Icon(Icons.play_circle_fill),
-        ),
+        iconSize: 90.0,
+        icon: Icon(Icons.play_circle_fill),
+      ),
     ],
   );
 }
 
-Widget _rowTwo(){
+Widget _rowTwo() {
   return Container(
       margin: EdgeInsets.only(left: 10, right: 10, top: 20.0, bottom: 20.0),
       height: 170,
-    child: Row(
-      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget> [
-         ClipRRect(
+      child: Row(
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
             child: Image.asset('assets/Thumbnail.jpg'),
           ),
-        Container(
-          margin: EdgeInsets.only(left: 20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-            Text(
-                'Spider-Man:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+          Container(
+            margin: EdgeInsets.only(left: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Spider-Man:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
                 ),
-              ),
-              Text(
-                'Homecoming',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                Text(
+                  'Homecoming',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
                 ),
-              ),
-              Text(
-                '2017',
-                style: TextStyle(
-                  //ontWeight: FontWeight.bold,
-                  fontSize: 15,
+                Text(
+                  '2017',
+                  style: TextStyle(
+                    //ontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
                 ),
-              ),
-          ],),
-        )
-    ],)
-  );
+              ],
+            ),
+          )
+        ],
+      ));
 }
 
-Widget _rowThree(){
+Widget _rowThree() {
   return Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          margin: EdgeInsets.only(left: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+    child: IntrinsicHeight(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            margin: EdgeInsets.only(left: 10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      '4.4',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: Colors.black,
+                      size: 20.0,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  '42K reviews',
+                  style: TextStyle(
+                    //fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 5.0,
+          ),
+          VerticalDivider(
+            color: Colors.grey,
+            thickness: 1,
+            width: 20,
+            indent: 8,
+            endIndent: 8,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        'assets/Tomato.jpg',
+                        height: 20,
+                      ),
+                      Text(
+                        '92%',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Tomatometer',
+                  style: TextStyle(
+                    //fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 5.0,
+          ),
+          VerticalDivider(
+            color: Colors.grey,
+            thickness: 1,
+            width: 20,
+            indent: 8,
+            endIndent: 8,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 15.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Text(
                   '4.4',
                   style: TextStyle(
@@ -90,112 +180,47 @@ Widget _rowThree(){
                     fontSize: 18,
                   ),
                 ),
-                Icon(
-                      Icons.star_rate,
-                      color: Colors.black,
-                      size: 20.0,
+                SizedBox(
+                  height: 10,
                 ),
-              ],),
-              SizedBox(height: 10.0,),
-              Text(
-                '42K reviews',
-                style: TextStyle(
-                  //fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(width: 5.0,),
-        Container(
-          width: 2,
-          height: 30,
-          color: Colors.grey,
-        ),
-        Container(
-          margin: EdgeInsets.only(left: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset('assets/Tomato.jpg', height: 20,),
                 Text(
-                  '92%',
+                  '42k reviews',
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    //fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),
                 ),
-              ],),),
-              SizedBox(height: 10,),
-              Text(
-                'Tomatometer',
-                style: TextStyle(
-                  //fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(width: 5.0,),
-        Container(
-          width: 2,
-          height: 30,
-          color: Colors.grey,
-        ),
-        Container(
-          margin: EdgeInsets.only(left: 15.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '4.4',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-              SizedBox(height: 10,),
-              Text(
-                '42k reviews',
-                style: TextStyle(
-                  //fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
+              ],
+            ),
+          )
+        ],
+      ),
     ),
   );
 }
 
-Widget _rowFour(){
+Widget _rowFour() {
   return Container(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(height: 15.0),
-      Container(
-        height: 50,
-        margin: EdgeInsets.all(8.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0),
-          border: Border.all(width: 2.0, color: Colors.grey),
-        ),
-        child: Center(
-          child: Text('Rent from KHR 12,174.04',
-          style: TextStyle(
-            color: Colors.pink,
-            fontWeight: FontWeight.bold,
-          ),),
-        )
-      ),
+        Container(
+            height: 50,
+            margin: EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+              border: Border.all(width: 2.0, color: Colors.grey),
+            ),
+            child: Center(
+              child: Text(
+                'Rent from KHR 12,174.04',
+                style: TextStyle(
+                  color: Colors.pink,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )),
         Container(
             height: 50,
             margin: EdgeInsets.all(8.0),
@@ -205,18 +230,20 @@ Widget _rowFour(){
               border: Border.all(width: 2.0, color: Colors.pink),
             ),
             child: Center(
-              child: Text('Buy from KHR 42,710.92',
+              child: Text(
+                'Buy from KHR 42,710.92',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                ),),
-            )
-        ),
-    ],),
+                ),
+              ),
+            )),
+      ],
+    ),
   );
 }
 
-Widget _rowFive(){
+Widget _rowFive() {
   return Container(
     margin: EdgeInsets.only(left: 10.0),
     child: Column(
@@ -226,35 +253,40 @@ Widget _rowFive(){
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                child: Text('About this movie',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                ),),
+                child: Text(
+                  'About this movie',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                  ),
+                ),
               ),
-              SizedBox(width: 221.0,),
+              SizedBox(
+                width: 221.0,
+              ),
               Container(
                 child: IconButton(
                     icon: Icon(
                       Icons.arrow_forward,
                       color: Colors.black,
                     ),
-                    onPressed: null
-                ),
+                    onPressed: null),
               ),
-            ],),
+            ],
+          ),
         ),
         Container(
           margin: EdgeInsets.all(8.0),
-          child: Text('Spider-Main [Tom Holland] begin to navigate '
-              'his new identity as the web-sibling '
-              'super hero under the '
-              'watchful eye of his mentor Tony Stark',
-          style: TextStyle(
-            color: Colors.grey,
-            fontWeight: FontWeight.w400,
-            fontSize: 18.0
-          ),),
+          child: Text(
+            'Spider-Main [Tom Holland] begin to navigate '
+            'his new identity as the web-sibling '
+            'super hero under the '
+            'watchful eye of his mentor Tony Stark',
+            style: TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.w400,
+                fontSize: 18.0),
+          ),
         ),
       ],
     ),
@@ -274,40 +306,38 @@ class _playStoreState extends State<playStore> {
                   Icons.arrow_back,
                   color: Colors.black,
                 ),
-                onPressed: null
-            ),
+                onPressed: null),
             Spacer(),
             IconButton(
                 icon: Icon(
                   Icons.bookmark,
                   color: Colors.black,
                 ),
-                onPressed: null
-            ),
+                onPressed: null),
             IconButton(
                 icon: Icon(
                   Icons.search,
                   color: Colors.black,
                 ),
-                onPressed: null
-            ),
+                onPressed: null),
             IconButton(
                 icon: Icon(
                   Icons.more_vert,
                   color: Colors.black,
                 ),
-                onPressed: null
-            )
+                onPressed: null)
           ],
         ),
-        body: ListView(children: [
-          _rowOne(),
-          _rowTwo(),
-          _rowThree(),
-          _rowFour(),
-          SizedBox(height:10.0),
-          _rowFive(),
-        ],),
+        body: ListView(
+          children: [
+            _rowOne(),
+            _rowTwo(),
+            _rowThree(),
+            _rowFour(),
+            SizedBox(height: 10.0),
+            _rowFive(),
+          ],
+        ),
       ),
     );
   }
