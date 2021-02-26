@@ -249,7 +249,7 @@ Widget _columnFive() {
       children: [
         Container(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 child: Text(
@@ -260,9 +260,9 @@ Widget _columnFive() {
                   ),
                 ),
               ),
-              SizedBox(
-                width: 221.0,
-              ),
+//              SizedBox(
+//                width: 221.0,
+//              ),
               Container(
                 child: IconButton(
                     icon: Icon(
