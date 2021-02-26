@@ -5,7 +5,7 @@ class playStore extends StatefulWidget {
   _playStoreState createState() => _playStoreState();
 }
 
-Widget _rowOne() {
+Widget _columnOne() {
   return Stack(
     alignment: Alignment.center,
     children: <Widget>[
@@ -27,7 +27,7 @@ Widget _rowOne() {
   );
 }
 
-Widget _rowTwo() {
+Widget _columnTwo() {
   return Container(
       margin: EdgeInsets.only(left: 10, right: 10, top: 20.0, bottom: 20.0),
       height: 170,
@@ -71,7 +71,7 @@ Widget _rowTwo() {
       ));
 }
 
-Widget _rowThree() {
+Widget _columnThree() {
   return Container(
     child: IntrinsicHeight(
       child: Row(
@@ -199,7 +199,7 @@ Widget _rowThree() {
   );
 }
 
-Widget _rowFour() {
+Widget _columnFour() {
   return Container(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -243,7 +243,7 @@ Widget _rowFour() {
   );
 }
 
-Widget _rowFive() {
+Widget _columnFive() {
   return Container(
     margin: EdgeInsets.only(left: 10.0),
     child: Column(
@@ -330,12 +330,12 @@ class _playStoreState extends State<playStore> {
         ),
         body: ListView(
           children: [
-            _rowOne(),
-            _rowTwo(),
-            _rowThree(),
-            _rowFour(),
+            _columnOne(),
+            _columnTwo(),
+            _columnThree(),
+            _columnFour(),
             SizedBox(height: 10.0),
-            _rowFive(),
+            _columnFive(),
           ],
         ),
       ),
